@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block title %} Update Product {% endblock title %}
+
+{% block content %}
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-5 offset-md-3">
+      <div class="border bg-white p-3">
+        <h3>Edit Item</h3>
+        <hr>
+        <form method="post">
+          {% csrf_token %}
+          {{form|crispy}}
+
+          <a class="btn btn-secondary" href="{% url 'store-product' %}">Cancel</a>
+          <input class="btn btn-info" type="submit" value="Update">
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock content %}

@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row mt-4">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header bg-info text-white">
+          Statistics
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-3">
+              <a class="text-decoration-none text-dark" href="{% url 'store-staff' %}">
+                <div class="card my-card shadow text-center p-3">
+                  <h4>Staff <i class="fas fa-users"></i></h4>
+                  <h3>{{workers_count}}</h3>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a class="text-decoration-none text-dark" href="{% url 'store-product' %}">
+                <div class="card my-card shadow text-center p-3">
+                  <h4>Products <i class="fas fa-box"></i></h4>
+                  <h3>{{products_count}}</h3>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a class="text-decoration-none text-dark" href="{% url 'store-order' %}">
+                <div class="card my-card shadow text-center p-3">
+                  <h4>Orders <i class="fas fa-shipping-fast"></i></h4>
+                  <h3>{{orders_count}}</h3>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a class="text-decoration-none text-dark" href="{% url 'store-customer' %}">
+                <div class="card my-card shadow text-center p-3">
+                  <h4>Customers <i class="fas fa-shipping-fast"></i></h4>
+                  <h3>{{customers_count}}</h3>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %} Orders {% endblock title %}
+
+{% block content %}
+{% include "top_nav.html" %}
+<!--Table-->
+<div class="container">
+  <div class="row my-4">
+    <div class="col-md-12">
+      <table class="table table-striped bg-white">
+        <thead class="bg-info">
+          <tr class="text-white">
+            <th scope="col">Product</th>
+            <th scope="col">Category</th>
+            <th scope="col">Order by</th>
+            <th scope="col">Date N Time</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Price</th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for order in orders %}
+          <tr>
+            <td>{{order.product.name}}</td>
+            <td>{{order.product.category}}</td>
+            <td>{{order.staff.username}}</td>
+            <td>{{order.date}}</td>
+            <td>{{order.order_quantity}}</td>
+            <td>{{order.price}}</td>
+            <td>{{order.total}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<!--End Table-->  
+{% endblock content %}
